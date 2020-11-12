@@ -1,0 +1,16 @@
+server {
+	listen 80;
+	listen [::]:80;
+	return 301 https://$host$request_uri;
+}
+	# SSL configuration
+server {	
+	listen 443 ssl;
+	listen [::]:443 ssl;
+	ssl_certificate /etc/ssl/certs/self-signed.crt;
+	ssl_certificate_key /etc/ssl/private/self-signed.key;
+
+	location / {
+		try_files $uri $uri/ =404;
+	}
+}
