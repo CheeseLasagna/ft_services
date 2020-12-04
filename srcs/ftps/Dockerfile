@@ -10,7 +10,6 @@ COPY vsftpd.conf /etc/vsftpd/vsftpd.conf
 COPY ./tlavelle.crt /etc/ssl/certs/self-signed.pem
 COPY ./tlavelle.key /etc/ssl/private/self-signed.key
 
-#RUN mkdir -p /var/ftp	
 COPY start.sh / 
 RUN chmod +x start.sh
 

@@ -14,7 +14,7 @@ spec:
       port: 20
     - name: ftp-connection
       port: 21
-    - name: pftp-data-0
+    - name: passive 
       port: 44000
 ---
 apiVersion: apps/v1
